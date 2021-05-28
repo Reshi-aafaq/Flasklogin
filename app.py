@@ -25,8 +25,7 @@ class Login(FlaskForm):
 def hoo():
     return render_template('hom.html')
 
-@app.route('/')
-@app.route('/registration',methods=['GET', 'POST'])
+@app.route('/',methods=['GET', 'POST'])
 def index():
     formm = registerform()
     if formm.validate_on_submit():
