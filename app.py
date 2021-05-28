@@ -21,13 +21,12 @@ class Login(FlaskForm):
     password = PasswordField("Password", validators=[DataRequired(), Length(min=1, max=4)])
     submit = SubmitField('Login')
 
-@app.route('/')
 @app.route('/home')
 def hoo():
     return render_template('hom.html')
 
 
-@app.route('/register',methods=['GET', 'POST'])
+@app.route('/',methods=['GET', 'POST'])
 def index():
     formm = registerform()
     if formm.validate_on_submit():
