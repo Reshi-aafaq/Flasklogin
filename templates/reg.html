@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Reshi Aafaq">
+    <meta name="author" content="Aafaq Altaf">
+    <meta name="description" >
+    <title> Registration </title>
+
+    <style>
+
+        .rah{
+              color:green;
+
+              }
+
+    </style>
+
+</head>
+<body bgcolor=#dwfadw>
+
+<br> <br> <br>
+
+<center>
+
+
+
+
+<form method=POST>
+     <fieldset >
+        <legend> Register </legend>
+
+         <dir> </dir>
+
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+    {{ form.user_name.label }} {{ form.user_name }} <br> <br>
+    {{ form.email.label }} {{ form.email }} <br> <br>
+    {{ form.password.label }} {{ form.password }} <br> <br>
+    {{ form.confirm.label }} {{ form.confirm }} <br> <br>
+
+    {{ form.submit() }}  <br> <br>
+    Already an account <a href = "{{ url_for('signin') }}"><font color="green"> Login
+           </font> </a> <br> <br><br><br><br><br><br><br><br> <br>
+    </dir>
+  </fieldset>
+
+</form>
+
+
+
+
+
+
+
+ </center>
+
+
+<center> <font color="black" size="6" >   <footer> @Aafaq Altaf</footer>  </font> </center>   </font>
+</body>
+</html>
